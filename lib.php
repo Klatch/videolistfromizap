@@ -14,7 +14,8 @@ function getOldImg(\ElggObject $o) {
 	if (empty($o->imagesrc)) {
 		if (!empty($o->videotype)) {
 			$user_dir = $f->getFilenameOnFilestore();
-			$glob_pattern = "izap_videos/{$o->videotype}/{$o->time_created}*.jpg";
+//			$glob_pattern = "izap_videos/{$o->videotype}/{$o->time_created}*.jpg";
+			$glob_pattern = "videos/{$o->videotype}/{$o->time_created}*.jpg";
 			foreach (glob($user_dir . $glob_pattern) as $match) {
 				return $match;
 			}

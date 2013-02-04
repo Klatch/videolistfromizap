@@ -19,7 +19,8 @@ spl_autoload_register(function ($class) {
 
 require __DIR__ . '/lib.php';
 
-$subtype_id = (int) get_subtype_id('object', 'izap_videos');
+//$subtype_id = (int) get_subtype_id('object', 'izap_videos');
+$subtype_id = (int) get_subtype_id('object', 'videos');
 
 $entities = elgg_get_entities(array(
 	'wheres' => array("e.subtype = $subtype_id"),
