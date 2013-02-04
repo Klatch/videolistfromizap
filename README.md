@@ -34,10 +34,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 ### If you had not renamed your videos types to remove the izap name you will have to uncomment these lines:
 
 convert.php:$subtype_id = (int) get_subtype_id('object', 'izap_videos');
+
 lib.php:			$glob_pattern = "izap_videos/{$o->videotype}/{$o->time_created}*.jpg";
 
 ### And comment out these (in my case, customize to your needs)
 
 convert.php:$subtype_id = (int) get_subtype_id('object', 'videos');
+
 lib.php:			$glob_pattern = "videos/{$o->videotype}/{$o->time_created}*.jpg";
 
